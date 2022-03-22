@@ -5,7 +5,6 @@ import globalRouter from './routers/globalRouter';
 import videoRouter from './routers/videoRouter';
 import userRouter from './routers/userRouter';
 
-const port = 4000;
 const app = express();
 const loggerMiddleware = logger('dev');
 
@@ -19,8 +18,4 @@ app.use('/', globalRouter);
 app.use('/videos', videoRouter);
 app.use('/users', userRouter);
 
-const handleListening = () => {
-  console.log(`server listening on ${port}`);
-};
-
-app.listen(port, handleListening);
+export default app;
