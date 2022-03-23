@@ -2,10 +2,8 @@
 import Video from '../models/Video';
 
 export const home = async (req, res) => {
-  Video.find({}, (error, videos) => {
-    console.log('home콜백에서 어떤 값이 들어오고 있나?', videos);
-    return res.render('home', { pageTitle: 'Home', videos });
-  });
+  const videos = await Video.find({}).sort({});
+  return res.render('home', { pageTitle: 'Home', videos });
 };
 
 export const watch = async (req, res) => {
