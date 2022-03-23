@@ -8,9 +8,4 @@ userRouter.route('./edit').get(edit);
 userRouter.route('./remove').get(remove);
 userRouter.route(':id').get(see);
 
-// userRouter.get('./logout', logout);
-// userRouter.get('/edit', edit);
-// userRouter.get('/remove', remove);
-// userRouter.get(':id', see);
-
 export default userRouter;
